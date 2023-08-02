@@ -1,0 +1,28 @@
+.add_New {
+  background-color: #11af72;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: absolute;
+  top: 150px;
+  right: 400px;
+}
+
+.add_New:hover {
+  background-color: #0d8f5e;
+  cursor: pointer;
+}
+
+.select_all-btn {
+  background-color: #3bb4e4;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.select_all-btn:hover {
+  background-color: #6495ed;
+}
