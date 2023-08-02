@@ -9,13 +9,14 @@ body {
   background: #6665ee;
 }
 
-.img {
+/* .img {
   position: absolute;
   width: 227px;
   height: 61px;
   left: 151px;
   top: 196px;
-}
+} */
+
 .conth {
   display: flex;
   justify-content: center;
@@ -176,6 +177,7 @@ body {
   color: black;
   border: none;
   padding: 10px 20px;
+  border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
