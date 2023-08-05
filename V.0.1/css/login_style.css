@@ -3,34 +3,47 @@ html,
 body {
   background: #f2f2f2;
   font-family: "Poppins", sans-serif;
+  text-align: center;
 }
 ::selection {
   color: #fff;
   background: #6665ee;
 }
 
-/* .img {
+.img {
   position: absolute;
   width: 227px;
   height: 61px;
   left: 151px;
   top: 196px;
-} */
-
+}
 .conth {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
 }
+.signup-div{
+  align-items: center;
+  margin-top: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
 
+}
+.signup{
+  color: #000000;
+  width: 120px;
+  left: 100px;
+  
+  
+}
 .container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .container .form {
   background: #fff;
   padding: 30px 35px;
@@ -53,6 +66,7 @@ body {
   font-size: 17px;
   font-weight: 500;
   transition: all 0.3s ease;
+  margin-bottom: 20px;
 }
 .container2 .form form .button:hover {
   background: #5757d1;
@@ -88,45 +102,24 @@ body {
   background: #2075ff;
   border-radius: 27px 0px 0px 27px;
 }
-
-.container1 p{
+.container1 h1 {
   position: absolute;
-  text-align: center;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 20px;
-  font-weight: bold;
-  width: 80%; /* Set the width of the line as you like */
+  width: 429px;
+  height: 154px;
+  left: 30px;
+  top: 50px;
 
-}
-
-.container1 h1{
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%; 
-  justify-content: center;
+  font-family: "Arial";
+  font-style: normal;
+  font-size: 26px;
 
   line-height: 33px;
   display: flex;
+  align-items: center;
   text-align: center;
+  font-weight: 200;
   color: #ffffff;
 }
-.container1 h1 span{
-  font-weight: 900;
-  font-style: bold;
-  font-size: 40px;
-  color: black;
-}
-.container1 h1:last-child{
-  font-weight: 900;
-  font-style: bold;
-  font-size: 40px;
-  color: white;
-}
-/* 
 .container1 h3 {
   text-align: center;
   font-family: "Inter";
@@ -135,7 +128,26 @@ body {
   font-size: 26px;
   margin-top: 270px;
   color: #000000;
-} */
+}
+.button{
+  margin-bottom: 10px;
+}
+.icon{
+  width:25px;
+}
+
+.mate{
+  color: #f2f2f2;
+  
+}
+.hire-mate{
+  font-size:90px;
+  font-weight:900;
+}
+.container2 h6{
+  color: #717171;
+}
+
 
 .container1 h5 {
   text-align: center;
@@ -170,26 +182,3 @@ body {
   color: white;
   transition: all 0.3s ease;
 }
-
-/* Base button styles */
-.sign-in-button {
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-  
-}
-
-/* Hover styles */
-.sign-in-button:hover {
-  background-color: #2075ff;
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
