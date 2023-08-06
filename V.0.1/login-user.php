@@ -26,7 +26,7 @@
         <form action="login-user.php" method="POST" autocomplete="">
           <h2 class="text-center">Login Form</h2>
           <p class="text-center">Login with your email and password.</p>
-          <!-- <?php
+          <?php
                     if(count($errors) >
           0){ ?>
           <div class="alert alert-danger text-center">
@@ -38,7 +38,7 @@
           </div>
           <?php
                     }
-                    ?> -->
+                    ?>
           <div class="form-group">
             <input
               class="form-control"

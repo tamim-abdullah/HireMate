@@ -29,7 +29,7 @@
                 <p class="text-center">Welcome back! Please enter your details.</p>
 
                 <!-- ALERT MESSEGE PHP -->
-                <!-- <?php
+                 <?php
                     if(count($errors) == 1){
                         ?>
                 <div class="alert alert-danger text-center">
@@ -56,7 +56,7 @@
                 </div>
                 <?php
                     }
-                    ?> -->
+                    ?> 
                     
                 <div class="form-group">
                     <input class="form-control" type="text" name="name" placeholder="Full Name" required
