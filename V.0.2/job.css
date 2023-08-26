@@ -206,6 +206,20 @@ color: #001E89;
     position: absolute;  
   }
   .mainContainer2{
+    top: 40%;
+    position: absolute;
+    margin-left: 10%;
+    max-width: fit-content;
+    min-width: 1300px;
+  }
+  .mainContainer3{
+    top: 70%;
+    position: absolute;
+    margin-left: 10%;
+    max-width: fit-content;
+    min-width: 1300px;
+  }
+  .mainContainer4{
     top: 60%;
     position: absolute;
     margin-left: 10%;

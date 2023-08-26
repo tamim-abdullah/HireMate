@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>Jobs</title>
+    <link rel="stylesheet" href="job.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="sidebar_style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="job.js" defer></script>
+    <script src="sidebar.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .modal {
+        width: 100%;
+      }
+      .modal-box {
+        width: 100%;
+      }
+      /* Font name - Poppins ( Link in Description ) */
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+      /* Lets style Button Hover Effect  */
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <?php include 'display_profile_image.php'; ?>
+          </span>
+
+          <div class="text logo-text">
+            <span class="name"><?php echo $_SESSION['name']; ?></span>
+
+            <span class="profession"><?php echo $job_title ?></span>
+
+            <a href="profile.php" class="edit-link">Edit</a>
+          </div>
+        </div>
+
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="sidebar-nav-link">
+              <a href="index.php">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="text nav-text">Dashboard</span>
+              </a>
+            </li>
+
+            <li class="sidebar-nav-link">
+              <a href="jobs.php">
+                <i class="bx bx-bar-chart-alt-2 icon"></i>
+                <span class="text nav-text">Jobs</span>
+              </a>
+            </li>
+
+            <li class="sidebar-nav-link">
+              <a href="candidate.php">
+                <i class="bx bx-group icon"></i>
+                <span class="text nav-text">Candidate</span>
+              </a>
+            </li>
+
+            <li class="sidebar-nav-link">
+              <a href="importcsv.php">
+                <i class="bx bx-import icon"></i>
+                <span class="text nav-text">Import CSV</span>
+              </a>
+            </li>
+
+            <li class="sidebar-nav-link">
+              <a href="resume.php">
+                <i class="bx bx-data icon"></i>
+                <span class="text nav-text">Resume Parsing</span>
+              </a>
+            </li>
+
+            <li class="sidebar-nav-link">
+              <a href="notifications.php">
+                <i class="bx bx-bell icon"></i>
+                <span class="text nav-text">Notifications</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bottom-content">
+          <li class="logout-link">
+            <a href="logout-user.php">
+              <i class="bx bx-log-out icon"></i>
+              <span class="text nav-text">Logout</span>
+            </a>
+          </li>
+
+          <li class="mode">
+            <div class="sun-moon">
+              <i class="bx bx-moon icon moon"></i>
+              <i class="bx bx-sun icon sun"></i>
+            </div>
+            <span class="mode-text text">Dark mode</span>
+
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-container">
+      <form action="" method="GET" class="mt-6 mb-1">
+        <div class="input-group mb-1">
+          <input
+            type="text"
+            name="search"
+            required
+            value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>"
+            class="form-control"
+            placeholder="Search People"
+          />
+          <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+      </form>
+    </div>
+    <div class="flex">
+      <div class="mainContainer1">
+        <div class="container1">
+          <h3>Front-end Devloper</h3>
+          <div class="ml-4 flex align-items-center align-content-center">
+            <button class="bg-none" onclick="my_modal_4.showModal()">
+              <svg
+                width="32"
+                height="30"
+                viewBox="0 0 32 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="1.48047"
+                  y="0.5"
+                  width="29.7411"
+                  height="29"
+                  fill="white"
+                />
+                <path
+                  d="M18.9121 18.75C18.9121 18.0596 19.4856 17.5 20.193 17.5C20.9004 17.5 21.4739 18.0596 21.4739 18.75C21.4739 19.4404 20.9004 20 20.193 20C19.4856 20 18.9121 19.4404 18.9121 18.75Z"
+                  stroke="#274AFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11.2266 18.75C11.2266 18.0596 11.8 17.5 12.5074 17.5C13.2148 17.5 13.7883 18.0596 13.7883 18.75C13.7883 19.4404 13.2148 20 12.5074 20C11.8 20 11.2266 19.4404 11.2266 18.75Z"
+                  stroke="#274AFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18.9121 11.25C18.9121 10.5596 19.4856 10 20.193 10C20.9004 10 21.4739 10.5596 21.4739 11.25C21.4739 11.9404 20.9004 12.5 20.193 12.5C19.4856 12.5 18.9121 11.9404 18.9121 11.25Z"
+                  stroke="#274AFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11.2266 11.25C11.2266 10.5596 11.8 10 12.5074 10C13.2148 10 13.7883 10.5596 13.7883 11.25C13.7883 11.9404 13.2148 12.5 12.5074 12.5C11.8 12.5 11.2266 11.9404 11.2266 11.25Z"
+                  stroke="#274AFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <rect
+                  x="1.48047"
+                  y="0.5"
+                  width="29.7411"
+                  height="29"
+                  stroke="#D2D2D2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="time">
+            <div class="ti">Full time</div>
+            <div class="ti">NewYork</div>
+          </div>
+          <div class="buttonContainer"></div>
+        </div>
+
+        <div class="container2 text-center">
+          <div class="flex justify-content-between">
+            <div class="inner"><span>SOURCED</span></div>
+            <div class="inner"><span>APPLIED</span></div>
+            <div class="inner"><span>INTERVIEW</span></div>
+            <div class="inner"><span>OFFERED</span></div>
+            <div class="inner"><span>HIRED</span></div>
+          </div>
+          <div class="container3" id="kanbanContainer1">
+            <!-- Open the modal using ID.showModal() method -->
+
+            <dialog id="my_modal_3" class="modal w-100">
+              <form method="dialog" class="modal-xl modal-box w-full max-w-5xl">
+                <div class="flex ml-8 justify-content-between">
+                  <div class="inner"><span>SOURCED</span></div>
+                  <div class="inner"><span>APPLIED</span></div>
+                  <div class="inner"><span>INTERVIEW</span></div>
+                  <div class="inner"><span>OFFERED</span></div>
+                  <div class="inner"><span>HIRED</span></div>
+                </div>
+                <div class="kanban-board">
+                  <div
+                    class="kanban-block"
+                    id="TASKBAKE"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  >
+                    <div
+                      class="task"
+                      id="task4"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="task"
+                      id="task5"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="task"
+                      id="task6"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="kanban-block"
+                    id="TASKBAKE"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  >
+                    <div
+                      class="task"
+                      id="task1"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="task"
+                      id="task2"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="kanban-block"
+                    id="TASKBAKE"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  >
+                    <div
+                      class="task"
+                      id="task3"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="kanban-block"
+                    id="TASKBAKE"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  >
+                    <div
+                      class="task"
+                      id="task3"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="kanban-block"
+                    id="TASKBAKE"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  >
+                    <div
+                      class="task"
+                      id="task3"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-action">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn">Close</button>
+                </div>
+              </form>
+            </dialog>
+          </div>
+        </div>
+      </div>
+      <div class="mainContainer2">
+        <div class="container1">
+          <h3>Front-end Devloper</h3>
+          <div class="ml-4 flex align-items-center align-content-center">
+            <button class="bg-none" onclick="my_modal_4.showModal()">
+              <svg
+                width="32"
+                height="30"
+                viewBox="0 0 32 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="1.48047"
+                  y="0.5"
+                  width="29.7411"
+                  height="29"
+                  fill="white"
+                />
+                <path
+                  d="M18.9121 18.75C18.9121 18.0596 19.4856 17.5 20.193 17.5C20.9004 17.5 21.4739 18.0596 21.4739 18.75C21.4739 19.4404 20.9004 20 20.193 20C19.4856 20 18.9121 19.4404 18.9121 18.75Z"
+                  stroke="#274AFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11.2266 18.75C11.2266 18.0596 11.8 17.5 12.5074 17.5C13.2148 17.5 13.7883 18.0596 13.7883 18.75C13.7883 19.4404 13.2148 20 12.5074 20C11.8 20 11.2266 19.4404 11.2266 18.75Z"
+                  stroke="#274AFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18.9121 11.25C18.9121 10.5596 19.4856 10 20.193 10C20.9004 10 21.4739 10.5596 21.4739 11.25C21.4739 11.9404 20.9004 12.5 20.193 12.5C19.4856 12.5 18.9121 11.9404 18.9121 11.25Z"
+                  stroke="#274AFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11.2266 11.25C11.2266 10.5596 11.8 10 12.5074 10C13.2148 10 13.7883 10.5596 13.7883 11.25C13.7883 11.9404 13.2148 12.5 12.5074 12.5C11.8 12.5 11.2266 11.9404 11.2266 11.25Z"
+                  stroke="#274AFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <rect
+                  x="1.48047"
+                  y="0.5"
+                  width="29.7411"
+                  height="29"
+                  stroke="#D2D2D2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="time">
+            <div class="ti">Full time</div>
+            <div class="ti">NewYork</div>
+          </div>
+          <div class="buttonContainer"></div>
+        </div>
+
+        <div class="container2 text-center">
+          <div class="flex justify-content-between">
+            <div class="inner"><span>SOURCED</span></div>
+            <div class="inner"><span>APPLIED</span></div>
+            <div class="inner"><span>INTERVIEW</span></div>
+            <div class="inner"><span>OFFERED</span></div>
+            <div class="inner"><span>HIRED</span></div>
+          </div>
+          <div class="container3" id="kanbanContainer2">
+            <!-- Open the modal using ID.showModal() method -->
+
+            <dialog id="my_modal_4" class="modal w-100">
+              <form method="dialog" class="modal-xl modal-box w-full max-w-5xl">
+                <div class="flex ml-8 justify-content-between">
+                  <div class="inner"><span>SOURCED</span></div>
+                  <div class="inner"><span>APPLIED</span></div>
+                  <div class="inner"><span>INTERVIEW</span></div>
+                  <div class="inner"><span>OFFERED</span></div>
+                  <div class="inner"><span>HIRED</span></div>
+                </div>
+                <div class="kanban-board">
+                  <div
+                    class="kanban-block"
+                    id="TASKBAKE"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  >
+                    <div
+                      class="task"
+                      id="task4"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="task"
+                      id="task5"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="task"
+                      id="task6"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="kanban-block"
+                    id="TASKBAKE"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  >
+                    task3
+                    <div
+                      class="task"
+                      id="task1"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="task"
+                      id="task2"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="kanban-block"
+                    id="TASKBAKE"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  >
+                    <div
+                      class="task"
+                      id="task3"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="kanban-block"
+                    id="TASKBAKE"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  >
+                    <div
+                      class="task"
+                      id="task3"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="kanban-block"
+                    id="TASKBAKE"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  >
+                    <div
+                      class="task"
+                      id="task3"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-action">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn">Close</button>
+                </div>
+              </form>
+            </dialog>
+          </div>
+        </div>
+      </div>
+      <div class="mainContainer3">
+        <div class="container1">
+          <h3>Front-end Devloper</h3>
+          <div class="ml-4 flex align-items-center align-content-center">
+            <button class="bg-none" onclick="my_modal_4.showModal()">
+              <svg
+                width="32"
+                height="30"
+                viewBox="0 0 32 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="1.48047"
+                  y="0.5"
+                  width="29.7411"
+                  height="29"
+                  fill="white"
+                />
+                <path
+                  d="M18.9121 18.75C18.9121 18.0596 19.4856 17.5 20.193 17.5C20.9004 17.5 21.4739 18.0596 21.4739 18.75C21.4739 19.4404 20.9004 20 20.193 20C19.4856 20 18.9121 19.4404 18.9121 18.75Z"
+                  stroke="#274AFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11.2266 18.75C11.2266 18.0596 11.8 17.5 12.5074 17.5C13.2148 17.5 13.7883 18.0596 13.7883 18.75C13.7883 19.4404 13.2148 20 12.5074 20C11.8 20 11.2266 19.4404 11.2266 18.75Z"
+                  stroke="#274AFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18.9121 11.25C18.9121 10.5596 19.4856 10 20.193 10C20.9004 10 21.4739 10.5596 21.4739 11.25C21.4739 11.9404 20.9004 12.5 20.193 12.5C19.4856 12.5 18.9121 11.9404 18.9121 11.25Z"
+                  stroke="#274AFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11.2266 11.25C11.2266 10.5596 11.8 10 12.5074 10C13.2148 10 13.7883 10.5596 13.7883 11.25C13.7883 11.9404 13.2148 12.5 12.5074 12.5C11.8 12.5 11.2266 11.9404 11.2266 11.25Z"
+                  stroke="#274AFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <rect
+                  x="1.48047"
+                  y="0.5"
+                  width="29.7411"
+                  height="29"
+                  stroke="#D2D2D2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="time">
+            <div class="ti">Full time</div>
+            <div class="ti">NewYork</div>
+          </div>
+          <div class="buttonContainer"></div>
+        </div>
+
+        <div class="container2 text-center">
+          <div class="flex justify-content-between">
+            <div class="inner"><span>SOURCED</span></div>
+            <div class="inner"><span>APPLIED</span></div>
+            <div class="inner"><span>INTERVIEW</span></div>
+            <div class="inner"><span>OFFERED</span></div>
+            <div class="inner"><span>HIRED</span></div>
+          </div>
+          <div class="container3" id="kanbanContainer2">
+            <!-- Open the modal using ID.showModal() method -->
+
+            <dialog id="my_modal_" class="modal w-100">
+              <form method="dialog" class="modal-xl modal-box w-full max-w-5xl">
+                <div class="flex ml-8 justify-content-between">
+                  <div class="inner"><span>SOURCED</span></div>
+                  <div class="inner"><span>APPLIED</span></div>
+                  <div class="inner"><span>INTERVIEW</span></div>
+                  <div class="inner"><span>OFFERED</span></div>
+                  <div class="inner"><span>HIRED</span></div>
+                </div>
+                <div class="kanban-board">
+                  <div
+                    class="kanban-block"
+                    id="TASKBAKE"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  >
+                    <div
+                      class="task"
+                      id="task4"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="task"
+                      id="task5"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="task"
+                      id="task6"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="kanban-block"
+                    id="TASKBAKE"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  >
+                    task3
+                    <div
+                      class="task"
+                      id="task1"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="task"
+                      id="task2"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="kanban-block"
+                    id="TASKBAKE"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  >
+                    <div
+                      class="task"
+                      id="task3"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="kanban-block"
+                    id="TASKBAKE"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  >
+                    <div
+                      class="task"
+                      id="task3"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="kanban-block"
+                    id="TASKBAKE"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  >
+                    <div
+                      class="task"
+                      id="task3"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                    >
+                      <div class="item">
+                        <div class="details">
+                          <img src="images/img-1.jpg" />
+                          <span>Kristina Zasiadko</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-action">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn">Close</button>
+                </div>
+              </form>
+            </dialog>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container">
+      <div class="dropdown">
+        Filter
+        <span class="arrow left_arrow"></span>
+        <span class="arrow right_arrow"></span>
+        <div class="items">
+          <span style="--i: 2" class="item about">Filter2</span>
+          <span style="--i: 3" class="item contact">Filter3</span>
+        </div>
+      </div>
+    </div> -->
+  </body>
+</html>
