@@ -1,0 +1,332 @@
+body {
+    background-color: rgb(0, 0, 0);
+    @media screen {
+        
+    }
+  }
+ 
+
+
+  .item .details img {
+    height: 45px;
+    width: 43px;
+   
+    margin-right: 12px;
+    
+    border-radius: 50%;
+  }
+
+  .item .details {
+    display: flex;
+    align-items: center;
+  }
+  .kanban-board {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: sans-serif;
+    
+  }
+
+  .kanban-block,
+  .create-new-task-block {
+    padding: 0.6rem;
+    width: 30.5%;
+    min-width: 14rem;
+    min-height: 4.5rem;
+    border-radius: 0.3rem;
+  }
+  #TASKBAKE{
+    background-color: #dbdbdb;
+  }
+  .task {
+    
+    margin: 0.2rem 0rem 0.3rem 0rem;
+    
+    border-radius: 0.2rem;
+    padding: 0.5rem 0.2rem 0.5rem 2rem;
+  }
+  
+
+
+
+  .con12{
+position: absolute;
+flex-direction: column;  
+width: 1120px;
+height: 180px;
+display: flex;
+margin-left: 1%;
+top: 50px;
+  }
+  @media (max-width:400px) {
+    .container1 {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  }
+  .container1{     
+    height: 50px;
+    top: 20px;
+    min-width: 60%;
+    background: #dbdbdb;
+    box-shadow: 8px 8px 39px rgba(0, 0, 0, 0.25);
+    border-radius: 11px 11px 0px 0px;
+    display: flex;
+    
+    flex-direction: row;
+    
+    width: 100%;
+   
+    
+
+  }
+  .container1 h3{
+
+height: 21px;
+left: 19px;
+top: 25px;
+margin-left: 20px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 27px;
+display: flex;
+align-self: center;
+
+/* identical to box height */
+
+
+color: #274AFF;
+
+  }
+
+  
+.time{
+    
+    margin-left: 25%;
+    min-width: 25%;
+    display: flex;
+    font-size: 12;
+    font-weight: 600;
+    color: #5e5e5e;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.ti {
+
+    flex: 5;
+
+    
+  }
+  .svg1{
+    
+    margin-top: 25px;
+    height: 35px;
+    background-color: #F2F2F2;
+    padding: 6px;
+    transition: background-color 0.3s ease;
+ 
+  }
+  .svg1:hover{
+    background-color: #274AFF;
+  }
+  .svg2{
+    width: 50px;
+    height: 50px;
+ 
+  }
+ .svg2:hover{
+    color: #F2F2F2;
+ }
+  
+  .container2{
+    
+    width: 100%;
+    padding: 20px;
+    height: 100px;
+    top: 100px;
+    background: #ffffff;
+    box-shadow: 8px 8px 39px rgba(0, 0, 0, 0.25);
+    border-radius: 00px 0px 0px 0px;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+
+
+  }
+
+  .row {
+
+    
+    min-width: 100%;
+    display: flex;
+  }
+  
+  .inner {
+    flex: 1;
+    padding: 10px;
+    
+  }
+  .inner{
+    transition: color 0.3s ease-in-out;
+  }
+.inner span{
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 23px;
+color: #001E89;
+
+  }
+  .inner :hover{
+    color: #F2F2F2;
+  }
+
+  
+  .container3 {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    height: fit-content;
+    
+  }
+
+  .mainContainer1{
+    top: 10%;
+    position: absolute;
+    margin-left: 10%;
+    max-width: fit-content;
+    min-width: 1300px;
+    position: absolute;  
+  }
+  .mainContainer2{
+    top: 60%;
+    position: absolute;
+    margin-left: 10%;
+    max-width: fit-content;
+    min-width: 1300px;
+  }
+
+.buttonContainer{
+display: flex;
+align-items: center;
+justify-content: center;  
+height: 100px;
+}
+  
+.button{
+  display: inline-flex;
+  height: 50px;
+  justify-content: left;
+
+
+} 
+  
+ 
+.item::after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 0px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #8598f7;
+  color: #fff;
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.5s;
+  opacity: 0;
+}
+.item:hover {
+  color: #ffffff;
+}
+.item:hover::after {
+  width: 270px;
+  height: 270px;
+  opacity: 1;
+  color: #ffffff;
+}
+.container {
+  margin-top: -7px;
+  margin-left: 80%;
+  width: 200px;
+  height: 220px;
+  overflow: hidden;
+}
+.container .dropdown {
+  
+  width: 90%;
+  height: 60px;
+  background-color: #000000;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.dropdown .arrow {
+  width: 14px;
+  height: 3.5px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.dropdown .left_arrow {
+  transform: translateX(6px) rotate(45deg);
+}
+.dropdown .right_arrow {
+  transform: rotate(-45deg);
+}
+
+/* On Active Class Arrow Css  */
+.dropdown.active .left_arrow {
+  transform: translateX(6px) rotate(-45deg);
+}
+.dropdown.active .right_arrow {
+  transform: rotate(45deg);
+}
+
+/* Dropdown Menu Options Css */
+
+.dropdown .items {
+  width: 100%;
+  position: absolute;
+  top: 65px; /*  60px dropdown button  +  5px margin   */
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.items .item {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  color: #000000;
+  display: grid;
+  place-items: center;
+  margin-bottom: 2.5px;
+  border-radius: 5px;
+  transform: translateX(200px);
+  transition: 0.5s;
+  transition-delay: calc(50ms * var(--i));
+  overflow: hidden;
+}
+.dropdown.active .item {
+  transform: translateX(0px);
+}
+
+.header-container {
+  margin-right: 250px;
+  margin-left: 250px;
+  margin-top: 20px;
+}
+

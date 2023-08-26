@@ -1,0 +1,11 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../image-upload-php-and-mysql-main/image-upload-php-and-mysql-main/uploads"
+	}
+],
+  "settings": {}
+}
